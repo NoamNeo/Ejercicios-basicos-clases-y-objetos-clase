@@ -9,7 +9,8 @@ public class Main {
     cancion2.setTitulo("Master of puppets");
     cancion2.setArtista("Metalica");
     cancion2.setDuracion(450);
-    System.out.printf("%s de %s con una duración de %,d segundos", cancion1.getTitulo(), cancion1.getArtista(),
+    System.out.printf("Output ejercicio 1: \n");
+    System.out.printf("\n%s de %s con una duración de %,d segundos", cancion1.getTitulo(), cancion1.getArtista(),
         cancion1.getDuracion());
     System.out.printf("\n%s de %s con una duración de %,d segundos", cancion2.getTitulo(), cancion2.getArtista(),
         cancion2.getDuracion());
@@ -18,6 +19,26 @@ public class Main {
     System.out.printf("\nError corregido, duración nueva: %,d", cancion2.getDuracion());
     System.out.printf("\n%s de %s con una duración de %,d segundos", cancion2.getTitulo(), cancion2.getArtista(),
         cancion2.getDuracion());
+    if (cancion1.getDuracion() > cancion2.getDuracion()) {
+      System.out.printf("\nLa canción más larga es: %s", cancion1.getTitulo());
+    } else if (cancion1.getDuracion() == cancion2.getDuracion()) {
+      System.out.printf("\nAmbas canciones son igual de largas");
+    } else {
+      System.out.printf("\nLa cancion más larga es: %s", cancion2.getTitulo());
+    }
     // Fin ejercicio 1
+
+    // Ejercicio 2 película:
+    Pelicula pelicula = new Pelicula();
+    pelicula.setTitulo("Hot Fuzz");
+    pelicula.setDirector("Edgar Wright");
+    pelicula.setDuracion(121);
+    pelicula.setEstreno(2007);
+    System.out.printf("\n\nOutput ejercicio 2: \n");
+    System.out.printf("\nTítulo: %s\nDirector: %s\nAño de estreno: %,d\nDuración: %,d", pelicula.getTitulo(),
+        pelicula.getDirector(), pelicula.getEstreno(), pelicula.getDuracion());
+    // modificamos el director para que este en mayúsculas
+    pelicula.setDirector(pelicula.getDirector().toUpperCase());
+    System.out.printf("\nDirector en mayúsculas: %s", pelicula.getDirector());
   }
 }
