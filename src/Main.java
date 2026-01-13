@@ -40,5 +40,38 @@ public class Main {
     // modificamos el director para que este en mayúsculas
     pelicula.setDirector(pelicula.getDirector().toUpperCase());
     System.out.printf("\nDirector en mayúsculas: %s", pelicula.getDirector());
+    // Fin ejercicio 2
+
+    // Ejercicio 3 Youtube:
+    Youtuber youtuber1 = new Youtuber();
+    Youtuber youtuber2 = new Youtuber();
+    Youtuber youtuber3 = new Youtuber();
+    youtuber1.setCanal("Cooking with babish");
+    youtuber1.setCategoria("Cocina");
+    youtuber1.setSubscriptores(1000000);
+    youtuber2.setCanal("Pianta");
+    youtuber2.setCategoria("Gaming");
+    youtuber2.setSubscriptores(900000);
+    youtuber3.setCanal("Abroad in japan");
+    youtuber3.setCategoria("Vloggin");
+    youtuber3.setSubscriptores(1900000);
+    System.out.printf("\n\nOutput ejercicio 3: \n");
+    System.out.printf("\nCanal: %s\nCategoría: %s\nSubscriptores: %,d\n", youtuber1.getCanal(),
+        youtuber1.getCategoria(), youtuber1.getSubscriptores());
+    System.out.printf("\nCanal: %s\nCategoría: %s\nSubscriptores: %,d\n", youtuber2.getCanal(),
+        youtuber2.getCategoria(), youtuber2.getSubscriptores());
+    System.out.printf("\nCanal: %s\nCategoría: %s\nSubscriptores: %,d\n", youtuber3.getCanal(),
+        youtuber3.getCategoria(), youtuber3.getSubscriptores());
+    youtuber1.setSubscriptores(youtuber1.getSubscriptores() + 500000);
+    youtuber2.setSubscriptores(youtuber2.getSubscriptores() + 500000);
+    youtuber3.setSubscriptores(youtuber3.getSubscriptores() + 500000);
+    System.out.printf("\nConsiguieron nuevos subscriptores!!!\n");
+    System.out.printf("\nCanal: %s\nCategoría: %s\nSubscriptores: %,d\n", youtuber1.getCanal(),
+        youtuber1.getCategoria(), youtuber1.getSubscriptores());
+    System.out.printf("\nCanal: %s\nCategoría: %s\nSubscriptores: %,d\n", youtuber2.getCanal(),
+        youtuber2.getCategoria(), youtuber2.getSubscriptores());
+    System.out.printf("\nCanal: %s\nCategoría: %s\nSubscriptores: %,d\n", youtuber3.getCanal(),
+        youtuber3.getCategoria(), youtuber3.getSubscriptores());
+    // Fin ejercicio 3
   }
 }
