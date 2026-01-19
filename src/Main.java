@@ -73,5 +73,42 @@ public class Main {
     System.out.printf("\nCanal: %s\nCategoría: %s\nSubscriptores: %,d\n", youtuber3.getCanal(),
         youtuber3.getCategoria(), youtuber3.getSubscriptores());
     // Fin ejercicio 3
+
+    // Ejercicio 4 Jugador Futbol
+    JugadorFutbol jugador = new JugadorFutbol();
+    jugador.setDorsal(12);
+    jugador.setEquipo("Celta");
+    jugador.setNombre("John Celta");
+    jugador.setPosicion("La mejor");
+    System.out.printf("\nNombre: %s\nEquipo: %s\nPosición: %s\nDorsal: %,d\n", jugador.getNombre(), jugador.getEquipo(),
+        jugador.getPosicion(), jugador.getDorsal());
+    System.out.println("Demoted");
+    jugador.setPosicion("La Peor");
+    System.out.printf("Nombre: %s\nEquipo: %s\nPosición: %s\nDorsal: %,d\n", jugador.getNombre(), jugador.getEquipo(),
+        jugador.getPosicion(), jugador.getDorsal());
+    // Fin ejercicio 4
+
+    // Ejercicio 5
+    Skin skin1 = new Skin();
+    Skin skin2 = new Skin();
+    skin1.setNombre("La más rara");
+    skin1.setPrecio(15);
+    skin1.setRareza("Rara");
+    skin1.setVideojuego("CSGO");
+    skin2.setNombre("La menos rara");
+    skin2.setPrecio(5);
+    skin2.setRareza("Común");
+    skin2.setVideojuego("Fortnite");
+    System.out.printf("\nSkin: %s\nJuego: %s\nRareza: %s\nCoste: %,d monedas\n", skin1.getNombre(),
+        skin1.getVideojuego(),
+        skin1.getRareza(), skin1.getPrecio());
+    System.out.printf("Skin: %s\nJuego: %s\nRareza: %s\nCoste: %,d monedas\n", skin2.getNombre(), skin2.getVideojuego(),
+        skin2.getRareza(), skin2.getPrecio());
+    System.out.println("Cambia la rareza");
+    skin2.setRareza("Mega rara");
+    skin2.setNombre("La mega rara");
+    skin2.setPrecio(1000000);
+    System.out.printf("Skin: %s\nJuego: %s\nRareza: %s\nCoste: %,d monedas\n", skin2.getNombre(), skin2.getVideojuego(),
+        skin2.getRareza(), skin2.getPrecio());
   }
 }
