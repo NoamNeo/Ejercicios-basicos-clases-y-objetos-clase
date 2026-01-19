@@ -131,5 +131,18 @@ public class Main {
     System.out.printf("\nManga: %s\nAutor: %s\nVolumen: %,d\nLeído: %s\n", manga1.getTitulo(), manga1.getAutor(),
         manga1.getNumVolumen(), (manga1.getLeido()) ? "Si" : "No");
     // Fin ejercicio 7
+
+    // Ejercicio 8
+    EquipoEsports equipo = new EquipoEsports();
+    equipo.setNombre("Los Ratones");
+    equipo.setJuego("League of Legends");
+    equipo.setPais("Suecia");
+    equipo.setRanking(10000);
+    System.out.printf("\nEquipo: %s\nJuego: %s\nPaís: %s\nRanking: %,d\n", equipo.getNombre(), equipo.getJuego(),
+        equipo.getPais(), equipo.getRanking());
+    System.out.println("Los Ratones se convierte en el mejor equipo del mundo");
+    equipo.setRanking(1);
+    System.out.printf("Equipo: %s\nJuego: %s\nPaís: %s\nRanking: %,d\n", equipo.getNombre(), equipo.getJuego(),
+        equipo.getPais(), equipo.getRanking());
   }
 }
