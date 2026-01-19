@@ -123,5 +123,13 @@ public class Main {
     // Fin ejercicio 6
 
     // Ejercicio 7
+    Manga manga1 = new Manga();
+    manga1.setTitulo("Death Note");
+    manga1.setAutor("Autor de Death Note");
+    manga1.setNumVolumen(1);
+    manga1.setLeido(true);
+    System.out.printf("\nManga: %s\nAutor: %s\nVolumen: %,d\nLeído: %s\n", manga1.getTitulo(), manga1.getAutor(),
+        manga1.getNumVolumen(), (manga1.getLeido()) ? "Si" : "No");
+    // Fin ejercicio 7
   }
 }
