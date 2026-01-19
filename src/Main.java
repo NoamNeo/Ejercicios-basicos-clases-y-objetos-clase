@@ -110,5 +110,18 @@ public class Main {
     skin2.setPrecio(1000000);
     System.out.printf("Skin: %s\nJuego: %s\nRareza: %s\nCoste: %,d monedas\n", skin2.getNombre(), skin2.getVideojuego(),
         skin2.getRareza(), skin2.getPrecio());
+    // Fin ejercicio 5
+
+    // Ejercicio 6
+    Pokemon pikachu = new Pokemon();
+    pikachu.setNombre("Pikachu");
+    pikachu.setTipo("Eléctrico");
+    pikachu.setNivel(20);
+    pikachu.setVida(60);
+    System.out.printf("\nPokemon: %s\nTipo: %s\nNivel: %,d\nVida: %,d\n", pikachu.getNombre(), pikachu.getTipo(),
+        pikachu.getNivel(), pikachu.getVida());
+    // Fin ejercicio 6
+
+    // Ejercicio 7
   }
 }
