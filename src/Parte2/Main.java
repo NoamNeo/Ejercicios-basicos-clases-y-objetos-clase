@@ -1,5 +1,6 @@
 package Parte2;
 
+import java.lang.classfile.instruction.SwitchCase;
 import java.util.Random;
 
 public class Main {
@@ -80,5 +81,26 @@ public class Main {
     carrito.aplicarDescuento();
     System.out.println("Balance final: " + carrito.getTotal());
     // Fin ejercicio 13
+
+    // Ejercicio 14
+    Post megaPost = new Post();
+    System.out.println("\nSimulamos la vida de un post");
+    for (int i = 0; i < 300; i++) {
+      switch (rand.nextInt(0, 4)) {
+        case 0:
+          megaPost.darLike();
+          break;
+        case 1:
+          megaPost.darDislike();
+          break;
+        case 2:
+          megaPost.darLike();
+          break;
+      }
+    }
+    System.out.println("Vamos a ver cómo quedó el post");
+    System.out.printf("Título: %s\nLikes: %,d\nDislikes: %,d\nPopularidad: %,d\n", megaPost.getTitulo(),
+        megaPost.getLikes(), megaPost.getDislikes(), megaPost.getPopularidad());
+    // Fin ejercicio 14
   }
 }
