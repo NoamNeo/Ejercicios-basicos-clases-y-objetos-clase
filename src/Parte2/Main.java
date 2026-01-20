@@ -56,17 +56,29 @@ public class Main {
     Personaje personaje = new Personaje("Gabi");
     Personaje enemigo = new Personaje("Enemigo");
     System.out.println(personaje.toString());
-    System.out.println("Simulamos combate".toUpperCase());
-    while (personaje.estaVivo() || enemigo.estaVivo()) {
-      System.out.println(personaje.toString());
-      System.out.println(enemigo.toString());
-      if (rand.nextInt(0, 2) == 1) {
-        System.out.println("Te curas".toUpperCase());
-        personaje.curarse(20);
-      }
-      enemigo.recibirDano(personaje.getAtaque());
-      personaje.recibirDano(enemigo.getAtaque());
-    }
+    // System.out.println("Simulamos combate".toUpperCase());
+    // while (personaje.estaVivo() || enemigo.estaVivo()) {
+    // System.out.println(personaje.toString());
+    // System.out.println(enemigo.toString());
+    // if (rand.nextInt(0, 2) == 1) {
+    // System.out.println("Te curas".toUpperCase());
+    // personaje.curarse(20);
+    // }
+    // enemigo.recibirDano(personaje.getAtaque());
+    // personaje.recibirDano(enemigo.getAtaque());
+    // }
     // Fin Ejercicio 12
+
+    // Ejercicio 13
+    Carrito carrito = new Carrito();
+    System.out.println();
+    for (int i = 0; i < 5; i++) {
+      carrito.anadirCarrito();
+      System.out.println("Añades algo al carrito");
+    }
+    System.out.println("Aplicas el descuento");
+    carrito.aplicarDescuento();
+    System.out.println("Balance final: " + carrito.getTotal());
+    // Fin ejercicio 13
   }
 }
