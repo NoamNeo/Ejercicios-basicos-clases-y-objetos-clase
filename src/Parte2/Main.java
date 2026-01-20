@@ -1,6 +1,5 @@
 package Parte2;
 
-import java.lang.classfile.instruction.SwitchCase;
 import java.util.Random;
 
 public class Main {
@@ -55,7 +54,7 @@ public class Main {
 
     // Ejercicio 12
     Personaje personaje = new Personaje("Gabi");
-    Personaje enemigo = new Personaje("Enemigo");
+    // Personaje enemigo = new Personaje("Enemigo");
     System.out.println(personaje.toString());
     // System.out.println("Simulamos combate".toUpperCase());
     // while (personaje.estaVivo() || enemigo.estaVivo()) {
@@ -102,5 +101,13 @@ public class Main {
     System.out.printf("Título: %s\nLikes: %,d\nDislikes: %,d\nPopularidad: %,d\n", megaPost.getTitulo(),
         megaPost.getLikes(), megaPost.getDislikes(), megaPost.getPopularidad());
     // Fin ejercicio 14
+
+    // Ejercicio 15
+    SesionJuego sesionJuego1 = new SesionJuego("Team Fortress 2");
+    sesionJuego1.jugar(180);
+    System.out.println("Simulamos una sesión de juego");
+    System.out.printf("\nJuego: %s\nTiempo de sesión: %.2f horas\n", sesionJuego1.getNombreJuego(),
+        sesionJuego1.getHorasJugadas());
+    // Fin ejercicio 15
   }
 }
