@@ -1,5 +1,7 @@
 package Semana2;
 
+import java.util.Random;
+
 public class Main {
   public static void main(String[] args) {
     // Ejercicio 1
@@ -31,5 +33,39 @@ public class Main {
     System.out.println("Recibes 110 de daño");
     gabi.recibirDano(110);
     gabi.mostrarEstado();
+    // Fin ejercicio 2
+
+    // Ejercicio 3
+    Random rand = new Random();
+    Contador contador = new Contador(14);
+    System.out.println();
+    contador.valorActual();
+    for (int i = 0; i < 10; i++) {
+      switch (rand.nextInt(0, 5)) {
+        case 0:
+          System.out.println("Incrementamos el contador en 5");
+          contador.incrementarContador();
+          break;
+        case 1:
+          System.out.println("Incrementamos el contador en un número aleatorio");
+          contador.incrementarContador(rand.nextInt(0, 6));
+          break;
+        case 2:
+          System.out.println("Decrementamos el contador en 5");
+          contador.decrementarContador();
+          break;
+        case 3:
+          System.out.println("Decrementamos el contador en un número aleatorio");
+          contador.decrementarContador(rand.nextInt(0, 6));
+          break;
+        case 4:
+          System.out.println("Reseteamos el contador");
+          contador.resetContador();
+          break;
+      }
+      contador.valorActual();
+    }
+    // Fin ejercicio 3
+
   }
 }
