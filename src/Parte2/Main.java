@@ -33,5 +33,23 @@ public class Main {
     }
     marcador.resultado();
     // Fin ejercicio 10
+
+    // Ejercicio 11
+    BateriaMovil movil = new BateriaMovil();
+    System.out.printf("\nBatería Móvil: %,d%%\n", movil.getPorcentaje());
+    movil.cargar();
+    System.out.println("Vamos a usar el móvil hasta que se quede sin batería");
+    while (movil.getPorcentaje() > 0) {
+      movil.usar();
+    }
+    System.out.printf("Batería Móvil: %,d%%\n", movil.getPorcentaje());
+    System.out.println("Se ha quedado sin batería");
+    System.out.println("Vamos a cargarlo hasta el tope");
+    while (movil.getPorcentaje() < 100) {
+      movil.cargar();
+    }
+    System.out.printf("Batería Móvil: %,d%%\n", movil.getPorcentaje());
+    System.out.println("Se ha cargado");
+    // Fin Ejercicio 11
   }
 }
