@@ -109,5 +109,11 @@ public class Main {
     System.out.printf("\nJuego: %s\nTiempo de sesión: %.2f horas\n", sesionJuego1.getNombreJuego(),
         sesionJuego1.getHorasJugadas());
     // Fin ejercicio 15
+
+    // Ejercicio 16
+    EntradaCine vengadores = new EntradaCine("Los vengadores", 20, true);
+    EntradaCine pulpFiction = new EntradaCine("Pulp Fiction", 15, false);
+    System.out.println(vengadores.toString());
+    System.out.println(pulpFiction.toString());
   }
 }
