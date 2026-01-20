@@ -67,5 +67,18 @@ public class Main {
     }
     // Fin ejercicio 3
 
+    // Ejercicio 4
+    Coche coche = new Coche("Seat", 120);
+    for (int i = 0; i < 30; i++) {
+      System.out.println("Aceleramos");
+      coche.acelerar();
+      coche.mostrarVelocidad();
+    }
+    for (int i = 0; i < 30; i++) {
+      System.out.println("Frenamos");
+      coche.frenar();
+      coche.mostrarVelocidad();
+    }
+    // Fin ejercicio 4
   }
 }
