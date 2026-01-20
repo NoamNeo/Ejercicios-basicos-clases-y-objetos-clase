@@ -51,5 +51,22 @@ public class Main {
     System.out.printf("Batería Móvil: %,d%%\n", movil.getPorcentaje());
     System.out.println("Se ha cargado");
     // Fin Ejercicio 11
+
+    // Ejercicio 12
+    Personaje personaje = new Personaje("Gabi");
+    Personaje enemigo = new Personaje("Enemigo");
+    System.out.println(personaje.toString());
+    System.out.println("Simulamos combate".toUpperCase());
+    while (personaje.estaVivo() || enemigo.estaVivo()) {
+      System.out.println(personaje.toString());
+      System.out.println(enemigo.toString());
+      if (rand.nextInt(0, 2) == 1) {
+        System.out.println("Te curas".toUpperCase());
+        personaje.curarse(20);
+      }
+      enemigo.recibirDano(personaje.getAtaque());
+      personaje.recibirDano(enemigo.getAtaque());
+    }
+    // Fin Ejercicio 12
   }
 }
