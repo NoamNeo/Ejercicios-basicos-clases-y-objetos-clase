@@ -47,4 +47,8 @@ public class Coche {
     System.out.println("Velocidad: " + getVelocidad());
   }
 
+  public void mostrarStats() {
+    System.out.println("Marca: " + getMarca() + "\nVelocidad maxima: " + getVelocidadMax());
+  }
+
 }

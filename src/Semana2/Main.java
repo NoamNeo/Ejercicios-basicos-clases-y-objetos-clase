@@ -80,5 +80,29 @@ public class Main {
       coche.mostrarVelocidad();
     }
     // Fin ejercicio 4
+
+    // Ejercicio 5
+    Termometro termometro = new Termometro(49);
+    for (int i = 0; i < 5; i++) {
+      termometro.subirTemperatura();
+      termometro.mostrarTemperatura();
+    }
+    for (int i = 0; i < 5; i++) {
+      termometro.bajarTemperatura();
+      termometro.mostrarTemperatura();
+    }
+    termometro = new Termometro(-49);
+    for (int i = 0; i < 5; i++) {
+      termometro.bajarTemperatura();
+      termometro.mostrarTemperatura();
+    }
+    for (int i = 0; i < 5; i++) {
+      termometro.subirTemperatura();
+      termometro.mostrarTemperatura();
+    }
+    // Fin Ejercicio 5
+
+    // Ejercicio 6
+
   }
 }
