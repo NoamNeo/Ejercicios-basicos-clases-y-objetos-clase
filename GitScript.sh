@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z "$1"]; then
+if [ -z "$1" ]; then
   echo "Usage: $0 <var_ejercicio>"
   exit 1
 fi
