@@ -82,6 +82,7 @@ public class Main {
     // Fin ejercicio 4
 
     // Ejercicio 5
+    System.out.println();
     Termometro termometro = new Termometro(49);
     for (int i = 0; i < 5; i++) {
       termometro.subirTemperatura();
@@ -103,6 +104,7 @@ public class Main {
     // Fin Ejercicio 5
 
     // Ejercicio 6
+    System.out.println();
     Mascota mascota = new Mascota("Michifu", 50);
     mascota.mostrarEstado();
     mascota.darComida();
@@ -113,5 +115,24 @@ public class Main {
     }
     mascota.mostrarEstado();
     // Fin ejercicio 6
+
+    // Ejercicio 7
+    System.out.println();
+    Ascensor ascensor = new Ascensor(7);
+    ascensor.mostrarPlanta();
+    System.out.println("Intentamos subir 4 plantas");
+    for (int i = 0; i < 4; i++) {
+      ascensor.subirPlanta();
+    }
+    ascensor.mostrarPlanta();
+    System.out.println("Cambiamos a la planta 3");
+    ascensor = new Ascensor(3);
+    ascensor.mostrarPlanta();
+    System.out.println("Intentamos bajar 4 plantas");
+    for (int i = 0; i < 4; i++) {
+      ascensor.bajarPlanta();
+    }
+    ascensor.mostrarPlanta();
+    // Fin ejercicio 7
   }
 }
