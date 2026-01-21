@@ -103,6 +103,15 @@ public class Main {
     // Fin Ejercicio 5
 
     // Ejercicio 6
-
+    Mascota mascota = new Mascota("Michifu", 50);
+    mascota.mostrarEstado();
+    mascota.darComida();
+    mascota.mostrarEstado();
+    System.out.println("Pasan 5 horas");
+    for (int i = 0; i < 5; i++) {
+      mascota.pasarTiempo();
+    }
+    mascota.mostrarEstado();
+    // Fin ejercicio 6
   }
 }
