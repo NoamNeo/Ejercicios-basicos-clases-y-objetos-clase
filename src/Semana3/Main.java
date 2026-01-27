@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
   private static final int NUMERO_ALUMNOS = 5;
   private static final int NUMERO_JUGADORES = 4;
+  private static final int NUMERO_PRODUCTOS = 10;
 
   public static void main(String[] args) {
     Scanner usrInput = new Scanner(System.in);
@@ -49,7 +50,6 @@ public class Main {
     // if (!nameExists) {
     // System.out.println("No hay un alumno con ese nombre");
     // }
-    usrInput.close();
 
     // Ejercicio Jugadores
     Jugadores[] jugadores = new Jugadores[NUMERO_JUGADORES];
@@ -76,5 +76,33 @@ public class Main {
         jugadores[i].mostrarJugador();
       }
     }
+
+    // Ejercicio Producto
+    Producto[] productos = new Producto[NUMERO_PRODUCTOS];
+    for (int i = 0; i < productos.length; i++) {
+      String nombre = Producto.nameGen(rand.nextInt(0, 10));
+      productos[i] = new Producto(nombre, rand.nextInt(50, 251));
+    }
+    System.out.println("Introduce el presupuesto por producto (en céntimos):");
+    int precio = usrInput.nextInt();
+    System.out.println("Productos fuera de presupuesto");
+    for (int i = 0; i < productos.length; i++) {
+      if (productos[i].getPrecio() > precio) {
+        System.out.println(productos[i].getEstado());
+      }
+    }
+    System.out.println("Productos dentro de presupuesto");
+    for (int i = 0; i < productos.length; i++) {
+      if (productos[i].getPrecio() <= precio) {
+        System.out.println(productos[i].getEstado());
+      }
+    }
+    Producto masCaro = null;
+    for (int i = 0; i < productos.length; i++) {
+      masCaro = (masCaro != null && masCaro.getPrecio() > productos[i].getPrecio()) ? masCaro : productos[i];
+    }
+    System.out.println("El producto más caro es:");
+    System.out.println(masCaro.getEstado());
+    usrInput.close();
   }
 }
