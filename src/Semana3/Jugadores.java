@@ -28,4 +28,12 @@ public class Jugadores {
   public void mostrarJugador() {
     System.out.printf("Jugador: %s\nVida: %,d\n", getNombre(), getVida());
   }
+
+  public void recibirDanho(int danho) {
+    this.vida = (this.vida - danho <= 0) ? 0 : this.vida - danho;
+  }
+
+  public boolean estaVivo() {
+    return !(getVida() <= 0);
+  }
 }
