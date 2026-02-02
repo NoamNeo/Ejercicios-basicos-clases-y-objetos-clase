@@ -17,25 +17,21 @@ public class Main {
       alumnos[i] = new Alumno(Alumno.nameGen(rand.nextInt(0, 10), rand.nextInt(0, 10)), rand.nextInt(4, 10));
     }
     double media = 0;
-    int idAlumnoMax = 0;
-    int notaMax = 0;
-    for (int i = 0; i < alumnos.length; i++) {
-      if (alumnos[i].getNota() >= 5) {
-        alumnos[i].mostrarAlumno();
+    Alumno alumnoMax = null;
+    for (Alumno alumno : alumnos) {
+      if (alumno.getNota() >= 5) {
+        alumno.mostrarAlumno();
       }
-      media = alumnos[i].getNota() + media;
-      if (notaMax < alumnos[i].getNota()) {
-        notaMax = alumnos[i].getNota();
-        idAlumnoMax = i;
-      }
+      media = media + alumno.getNota();
+      alumnoMax = (alumnoMax != null && alumnoMax.getNota() > alumno.getNota()) ? alumnoMax : alumno;
     }
     System.out.println("La media es: " + media / alumnos.length);
     System.out.println("El alumno con la nota más alta es:");
-    alumnos[idAlumnoMax].mostrarAlumno();
+    alumnoMax.mostrarAlumno();
     System.out.println("Los alumnos con las notas más altas son:");
-    for (int i = 0; i < alumnos.length; i++) {
-      if (alumnos[i].getNota() == notaMax) {
-        alumnos[i].mostrarAlumno();
+    for (Alumno alumno : alumnos) {
+      if (alumno.getNota() == alumnoMax.getNota()) {
+        alumno.mostrarAlumno();
       }
     }
     // System.out.println("Escribe un nombre para saber si está en la clase: ");
@@ -57,18 +53,18 @@ public class Main {
       jugadores[i] = new Jugadores(Jugadores.nameGen(rand.nextInt(0, 10), rand.nextInt(0, 10)), rand.nextInt(0, 20));
     }
     System.out.println("Estado inicial de los jugadores:");
-    for (int i = 0; i < jugadores.length; i++) {
-      jugadores[i].mostrarJugador();
+    for (Jugadores jugador : jugadores) {
+      jugador.mostrarJugador();
     }
     System.out.println("Los jugadores muertos son:");
-    for (int i = 0; i < jugadores.length; i++) {
-      if (!jugadores[i].estaVivo()) {
-        jugadores[i].mostrarJugador();
+    for (Jugadores jugador : jugadores) {
+      if (!jugador.estaVivo()) {
+        jugador.mostrarJugador();
       }
     }
     System.out.println("Les hacemos a todos 10 puntos de daño");
-    for (int i = 0; i < jugadores.length; i++) {
-      jugadores[i].recibirDanho(10);
+    for (Jugadores jugador : jugadores) {
+      jugador.recibirDanho(10);
     }
     System.out.println("Los jugadores muertos son:");
     for (int i = 0; i < jugadores.length; i++) {
@@ -86,20 +82,20 @@ public class Main {
     System.out.println("Introduce el presupuesto por producto (en céntimos):");
     int precio = usrInput.nextInt();
     System.out.println("Productos fuera de presupuesto");
-    for (int i = 0; i < productos.length; i++) {
-      if (productos[i].getPrecio() > precio) {
-        System.out.println(productos[i].getEstado());
+    for (Producto producto : productos) {
+      if (producto.getPrecio() > precio) {
+        System.out.println(producto.getEstado());
       }
     }
     System.out.println("Productos dentro de presupuesto");
-    for (int i = 0; i < productos.length; i++) {
-      if (productos[i].getPrecio() <= precio) {
-        System.out.println(productos[i].getEstado());
+    for (Producto producto : productos) {
+      if (producto.getPrecio() <= precio) {
+        System.out.println(producto.getEstado());
       }
     }
     Producto masCaro = null;
-    for (int i = 0; i < productos.length; i++) {
-      masCaro = (masCaro != null && masCaro.getPrecio() > productos[i].getPrecio()) ? masCaro : productos[i];
+    for (Producto producto : productos) {
+      masCaro = (masCaro != null && masCaro.getPrecio() > producto.getPrecio()) ? masCaro : producto;
     }
     System.out.println("El producto más caro es:");
     System.out.println(masCaro.getEstado());
