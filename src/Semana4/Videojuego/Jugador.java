@@ -1,10 +1,13 @@
 package Semana4.Videojuego;
 
+import java.util.Random;
+
 public class Jugador {
   private String nombre;
   private int vida;
   private int ataque;
   private int movimiento;
+  private boolean cancelado;
   Inventario inventario;
 
   private String getNombre() {
@@ -28,7 +31,16 @@ public class Jugador {
     this.vida = 50;
     this.ataque = 15;
     this.movimiento = 30;
+    this.cancelado = false;
     this.inventario = new Inventario(inventario);
+  }
+
+  public void ruletaDeTwitter() {
+    cancelado = new Random().nextBoolean();
+  }
+
+  private String estadoCancelado() {
+    return (this.cancelado) ? "Estás cancelado" : "No estás cancelado";
   }
 
   public void mostrarEstado() {
@@ -36,6 +48,7 @@ public class Jugador {
     System.out.println("Vida: " + getVida());
     System.out.println("Ataque: " + getAtaque());
     System.out.println("movimiento: " + getMovimiento());
+    System.out.println("Estado de cancelamiento: " + estadoCancelado());
     inventario.mostrarInventario();
   }
 }

@@ -1,25 +1,28 @@
 package Semana4.Videojuego;
 
+import java.util.Map;
+import java.util.HashMap;
+
 public class Objeto {
   private String nombre;
   private int cantidad;
+  private static Map<String, Integer> defaultItemAmmount;
 
-  private int getDefaultAmmount(String nombre) {
-    switch (nombre) {
-      case "Poción":
-        return 5;
-      case "Armadura":
-        return 1;
-      case "Cuerda":
-        return 10;
-      default:
-        return 0;
+  private static Map<String, Integer> getDefaultItems() {
+    if (defaultItemAmmount == null) {
+      defaultItemAmmount = new HashMap<String, Integer>();
+      defaultItemAmmount.put("Cuerda", 10);
+      defaultItemAmmount.put("Armadura", 1);
+      defaultItemAmmount.put("Poción", 5);
+      return defaultItemAmmount;
     }
+    return defaultItemAmmount;
   }
 
   public Objeto(String nombre) {
     this.nombre = nombre;
-    this.cantidad = getDefaultAmmount(nombre);
+    Map<String, Integer> cantidadesDefault = getDefaultItems();
+    this.cantidad = (cantidadesDefault.containsKey(nombre)) ? cantidadesDefault.get(nombre) : 0;
   }
 
   private int getCantidad() {
