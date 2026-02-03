@@ -8,7 +8,7 @@ public class Jugador {
   private int ataque;
   private int movimiento;
   private boolean cancelado;
-  Inventario inventario;
+  private Inventario inventario;
 
   private String getNombre() {
     return nombre;
